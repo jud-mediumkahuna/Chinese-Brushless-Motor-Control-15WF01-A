@@ -6,36 +6,43 @@ I want 80 Volt capacitors and "Tubes" (FETs) and that's what comes with 72 volt 
 But, be careful, Bob told me (and he knows) that you shouldn't run your electrolytics less than half volts
 because, they start to loose their identity.
 You can cure them of this by running them for a while at near max but not on an erratic, spiky Chinese motor control.
-I'm using a parallel string of Christmas lights (sans bulbs) to plug in all my old/stored capacitors in at once.
+I'm using a parallel string of Christmas lights (sans bulbs) to plug in all my old/stored capacitors at once.
 
-Which the reason I had to buy a new control was that already blew up two of them.
+Which the reason I had to buy a new control was that I already blew up two of them.
 They are both the same: came with Go Kart motors, 1800 Watts, 48 Volts (described elsewhere).
 The first one, I was soldering in a resistor (120K) to program the battery to 40 Volts and shorted out
 a minor electrolytic in the, switching, 15 Volt supply.
-I fixed the supply with solder but there was twice the current drawn on five volts.
+I fixed the supply with just solder but there was twice the current drawn on five volts.
 and it dragged both supplies down to unusable.
 The MCU appears to be the culprit (is drawing way much) but I haven't excavated deep enough to know for sure.
-I had the second one, sans case, running (good enough) the target motor off my 40 Volt battery.
+I'll know more when I pull the MCU off of there to replace it.
+
+I had the second one, sans case, running (good enough) the target motor off my target 40 Volt battery.
 I got to see all the supplies and signals talking Chinese and reverse-not-engineered pretty much all of it.
+I was vindicated in that the switching skeme is really inefficient and the right software will make it a lot better.
 The TUBE drivers are 3 discrete transistors, quite a few diodes and resistors (I'll draw the circuits some day).
+But they might work as is with the switching skeme I plan to use.
+
 I guess I forgot to discharge the main capacitors because I heard a little snap when I slid the board back in the case.
-All the power supplies, etc. are right and its pretty much got to be the MCU just died again.
-Its most likely I zapped an output. These Chinese MCU are very tolerant.
+All the power supplies, etc. are still right and its pretty much got to be the MCU just died again.
+Its most likely I zapped an output. These Chinese MCU are not very tolerant.
 The MCU has a funky pinout, 5 Volt supply, almost certainly 8 bit but, I couldn't find anything close.
 
-My plan is to put Teensys (eventually LC) in place of the Chinese MCUs, anyway but, I need to get my GoPed running for Bliss.
-So, I'm about open this new control and connect it to my 40 Volt battery and 1800 Watt motor.
+My plan is to put Teensys (3.5 to start, eventually LC) with I/O buffers, in place of the Chinese MCUs, anyway 
+but, I need to get my GoPed running for Bliss in a week.
+So, I'm about to open this new control and connect it to my 40 Volt battery and 1800 Watt motor.
 Your prayers are greatly appreciated.
 
 Its got the "Learn" function which is activated by connecting to wires. Hopefully, it programs battery voltage.
 Its got two wire reverse (as opposed to 3 wires on some controls).
+Its got 18 TUBES (instead of 15).
 Check out the Chinese documentation pictures.
 
-I put a picture of the connections in this repository but I couldn't find the info the learn feature but,
-I think it learns the battery voltage just, the arrangment of the position/hall sensors.
-Mine is wired right so I don't need to "learn" it.
+I put a picture of the connections in this repository but, I couldn't find the info on the learn feature but,
+I don't think it learns the battery voltage just, the rotation order of the position/hall sensors.
+mine is wired right so I don't need to "learn" it.
 
-The wires on the three wire throttle connector on this one is different than the other two controllers.
+The wire order on the three wire throttle connector on this one is different than the other two controllers.
 
 
 
