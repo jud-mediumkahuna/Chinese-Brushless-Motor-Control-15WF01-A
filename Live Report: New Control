@@ -31,7 +31,11 @@ Its got the "Learn" function which is activated by connecting to wires. Hopefull
 Its got two wire reverse (as opposed to 3 wires on some controls).
 Check out the Chinese documentation pictures.
 
-I'll post these pictures, try to get it running, and finish this report so, stay tuned.
+I put a picture of the connections in this repository but I couldn't find the info the learn feature but,
+I think it learns the battery voltage just, the arrangment of the position/hall sensors.
+Mine is wired right so I don't need to "learn" it.
+
+The wires on the three wire throttle connector on this one is different than the other two controllers.
 
 
 
