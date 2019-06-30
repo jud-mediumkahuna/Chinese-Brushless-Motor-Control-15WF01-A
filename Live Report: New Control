@@ -40,7 +40,7 @@ Check out the Chinese documentation pictures and http://www.etotheipiplusone.net
 
 I put a picture of the connections in this repository but, I couldn't find the info on the learn feature but,
 I don't think it learns the battery voltage just, the rotation order of the position/hall sensors.
-mine is wired right so I don't need to "learn" it.
+mine is wired right so I don't need to "learn" it (don't worry I'll try it anyway).
 
 The wire order on the three wire throttle connector on this one is different than the other two controllers.
 
