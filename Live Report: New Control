@@ -1,0 +1,38 @@
+I just got new Chinese Motor Control and I'm about to test, dissect, apply and report on it.
+
+It's rated 1500 Watts, 72 Volts (not 48-72). My requirement was 1800 Watts and I wanted one that went up to 72 Volts.
+Although I'm using a 40 Volt (Ryobi) battery pack. I don't plan to go passed 60 Volts so,
+I want 80 Volt capacitors and "Tubes" (FETs) and that's what comes with 72 volt units.
+But, be careful, Bob told me (and he knows) that you shouldn't run your electrolytics less than half volts
+because, they start to loose their identity.
+You can cure them of this by running them for a while at near max but not on an erratic, spiky Chinese motor control.
+I'm using a parallel string of Christmas lights (sans bulbs) to plug in all my old/stored capacitors in at once.
+
+Which the reason I had to buy a new control was that already blew up two of them.
+They are both the same: came with Go Kart motors, 1800 Watts, 48 Volts (described elsewhere).
+The first one, I was soldering in a resistor (120K) to program the battery to 40 Volts and shorted out
+a minor electrolytic in the, switching, 15 Volt supply.
+I fixed the supply with solder but there was twice the current drawn on five volts.
+and it dragged both supplies down to unusable.
+The MCU appears to be the culprit (is drawing way much) but I haven't excavated deep enough to know for sure.
+I had the second one, sans case, running (good enough) the target motor off my 40 Volt battery.
+I got to see all the supplies and signals talking Chinese and reverse-not-engineered pretty much all of it.
+The TUBE drivers are 3 discrete transistors, quite a few diodes and resistors (I'll draw the circuits some day).
+I guess I forgot to discharge the main capacitors because I heard a little snap when I slid the board back in the case.
+All the power supplies, etc. are right and its pretty much got to be the MCU just died again.
+Its most likely I zapped an output. These Chinese MCU are very tolerant.
+The MCU has a funky pinout, 5 Volt supply, almost certainly 8 bit but, I couldn't find anything close.
+
+My plan is to put Teensys (eventually LC) in place of the Chinese MCUs, anyway but, I need to get my GoPed running for Bliss.
+So, I'm about open this new control and connect it to my 40 Volt battery and 1800 Watt motor.
+Your prayers are greatly appreciated.
+
+Its got the "Learn" function which is activated by connecting to wires. Hopefully, it programs battery voltage.
+Its got two wire reverse (as opposed to 3 wires on some controls).
+Check out the Chinese documentation pictures.
+
+I'll post these pictures, try to get it running, and finish this report so, stay tuned.
+
+
+
+
