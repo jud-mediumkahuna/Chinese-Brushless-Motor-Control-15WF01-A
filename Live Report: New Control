@@ -44,29 +44,47 @@ mine is wired right so I don't need to "learn" it (don't worry I'll try it anywa
 
 The wire order on the three wire throttle connector on this one is different than the other two controllers.
 
-OK, I got the new controller running. 
+OK, I got the new controller running.
 
 I swapped two wires on the Throttle connector. I swapped the controller side so all my controllers are the same.
-I hooked up the three thick motor legs/phases, the the two thick power wires and the 
-"Switch Plug"/"Ignition"/Switched Power which is red to battery plus (thick Red).
-I turned the throttle and it ran. Backwards of course, so 
-I shunted the "Reversing the Plug" and the motor turned the other but not as fast.
+The throttle wires coming out of the controller are +4.3 Volts (Red), Ground/0 Volts (Black) and signal (Green w/ white stripe)
+All the black wires are ground/battery minus and connect to the thick black wire like other controllers.
+All the red wires are some kind of power but not necessarily battery plus (so, a little different)
+
+I hooked up the three thick motor legs/phases, the the two thick power wires and the
+"Switch Plug"/"Ignition"/Switched Power, which is red, to battery plus (thick Red).
+I turned the throttle and it ran. Backwards of course, so
+I shunted the "Reversing the Plug" and the motor turned the other way but, not as fast.
 I swapped two motor legs (green and blue) and swapped the corresponding wires on the position/hall connector.
-I hooked the two Learn wires together, it ran slowly etc. 
+I hooked the two Learn wires together, it ran slowly etc.
 Seems to run OK. I can't hear the sensorless mode kick in like www.etotheipiplusone.net reported.
-It doesn't seem much different beteen having the Halls plugged in or not.
+It doesn't seem much different between having the Halls plugged in or not. Not sure its using them.
+I'll do more experimenting and scope out all signals later.
 
 I haven't programmed the battery voltage (by soldering in a resister or jumper) but, I will.
 The battery voltage circuit is exactly the same as the other two controllers but it seems to ignore it.
-The battery voltage is programmed to 48 Volts (as shipped). 
-The Lable on the end says:
+The battery voltage is programmed to 48 Volts (as shipped).
+The label on the end says:
 
-  Voltage: 72V  Power: 1500W
+  "Voltage: 72V  Power: 1500W
   Current Limitting: 42A
-  Under Limiting: 41V
+  Under Limitting: 41V"
 
-The Under Limitting (42Volts) is consistant with being programmed for a 48 Volt Pack.
-But I've been running it on less than 41 Volts.
+The Under Limiting (41 Volts) is consistent with being programmed for a 48 Volt Pack.
+I've been running it on less than 41 Volts but, not much. I'll run it down some more and see what happens.
+
+The Three Speed Plug has 3 wires (Pink, Black, and Grey).
+Nothing connected is medium maxium speed. High maximum speed is Grey connected to black. Low is Pink and Black.
+
+The "Low Level Plug" has Black and Blue with a white stripe and is the break function when you connect them together.
+The High Level Plug doesn't do anything when you ground it or connect it to +5 Volts.
+Its biased low (0 Volts) unlike all the other digital inputs which are biased at 5 Volts.
+Maybe it wants battery voltage but, I'm afraid to try it.
+
+I'm going to throw this new controller on my GoPed and take it to Bliss Music Festival.
+I'll tear it back apart and finish this when I get back.
+
+
 
 
 
