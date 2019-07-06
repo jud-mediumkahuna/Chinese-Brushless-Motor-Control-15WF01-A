@@ -91,8 +91,30 @@ The throttle responce is quirky and its hard to control.
 I've tried several combinations of swapping phase/hall wires and using "Self Learn".
 Every combination behaves differently which is not a good sign.
 Yet another reason to replace the MCU and software and, do right.
-But, I'm out of time to mess with for now.
+But, I'm out of time to mess with it for now.
 
+Well, now I have a problem with my battery and/or charger. 
+I ran the electric GoPed up and down my street until it quit. 
+It appears that the 40 Volt Ryobi battery pack decided the cell voltage was too low and its battery protection circuit shut off.
+Now, the Ryobi charger, that came with it, says there's something wrong (flashing red and green) and won't charge it. 
+There's a pretty big circuit card in the battery pack for balancing and protection. 
+The battery protection circuit includes the typical two power FETs hooked back to back (drain to drain) 
+between battery pack minus and the negative pack output. 
+The 20 battery cells are in a 10S2P arrangement (ten pairs of parallel cells hooked in series).
+The pack seems pretty well balanced at 3.24 volts per cell (32.4 volts for the whole pack).
+The Chinese controller should have shut off when the pack voltage got down to 34 volts but it didn't.
+Seems like the charger should charge from an under voltage condition but it don't.
+I think its the battery pack thats not allowing itself to be charged by keeping both protection FETS off.
+I'm going to rig up a 40 Volt supply, charge the batteries a little (directly) and see if I can get over this hump.
+
+I've been planning to make my own battery protection and balancing circuit which includes a DC to DC converter.
+Looks like I'll have to move that up in the schedule for a long term solution to this problem.
+
+Meanwhile I'm going to set the three speed inputs on the controller to low.
+This GoPed orginally had a super high performance (tunned pipe etc) gas engine and was fast and dangerous.
+It pulled wheelies at 40 mph. I was only brave enough to drive it when I was fairly drunk. 
+I quite drinking a while back and decided to convert it to electric, expecting a mellow experience.
+But the top end is still around 40 and the lowest throttle jerks the front wheel off the ground.
 
 
 
