@@ -58,8 +58,8 @@ I shunted the "Reversing the Plug" and the motor turned the other way but, not a
 I swapped two motor legs (green and blue) and swapped the corresponding wires on the position/hall connector.
 I hooked the two Learn wires together, it ran slowly etc.
 Seems to run OK. I can't hear the sensorless mode kick in like www.etotheipiplusone.net reported.
-It doesn't seem much different between having the Halls plugged in or not. Not sure its using them.
-I'll do more experimenting and scope out all signals later.
+It doesn't seem much different between having the Hall motor position sensors plugged in or not. 
+Not sure its using them. I'll do more experimenting and scope out all signals later.
 
 I haven't programmed the battery voltage (by soldering in a resister or jumper) but, I will.
 The battery voltage circuit is exactly the same as the other two controllers but it seems to ignore it.
@@ -72,14 +72,17 @@ The label on the end says:
 
 The Under Limiting (41 Volts) is consistent with being programmed for a 48 Volt Pack.
 I've been running it on less than 41 Volts but, not much. I'll run it down some more and see what happens.
+I ran it down to 38 Volts but it didn't shut off so I guess the control ignores battery voltage.
 
 The Three Speed Plug has 3 wires (Pink, Black, and Grey).
-Nothing connected is medium maxium speed. High maximum speed is Grey connected to black. Low is Pink and Black.
+Nothing connected is medium maxium speed. High maximum speed is Grey connected to black (Ground). 
+Low maximum throttle speed is Pink connected to Black.
 
-The "Low Level Plug" has Black and Blue with a white stripe and is the break function when you connect them together.
-The High Level Plug doesn't do anything when you ground it or connect it to +5 Volts.
+The "Low Level Plug" has Black and Blue with a white stripe and is the Brake function.
+When you connect the blue with white stripe wire to ground (black), the motor stops. It starts again when disconnected. 
+The "High Level Plug" has only one wire (dark purple), doesn't do anything when you ground it or connect it to +5 Volts.
 Its biased low (0 Volts) unlike all the other digital inputs which are biased at 5 Volts.
-Maybe it wants battery voltage but, I'm afraid to try it.
+Maybe it wants higher/battery voltage but, I'm afraid to try it.
 
 I'm going to throw this new controller on my GoPed and take it to Bliss Music Festival.
 I'll tear it back apart and finish this when I get back.
@@ -87,16 +90,21 @@ I'll tear it back apart and finish this when I get back.
 Got my GoPed going with this new speed control and it's insane. 
 I can hardly keep the front wheel on the ground but top end is well over 35 MPH!
 I hard wired the "Three Speed" wires to high but I think I'm going to set it to low or medium.
-The throttle responce is quirky and its hard to control.
+The throttle responce is quirky and its hard to control. The lowest throttle setting is too fast.
 I've tried several combinations of swapping phase/hall wires and using "Self Learn".
-Every combination behaves differently which is not a good sign.
-Yet another reason to replace the MCU and software and, do right.
-But, I'm out of time to mess with it for now.
+Every combination behaves differently which is not a good sign in my book.
+Yet another reason to replace the MCU and software and, do it right.
+But, I don't have time to do that now.
+
+I took it for another test drive to see how long it would go on a charge. It cuts out at high speed.
 
 Well, now I have a problem with my battery and/or charger. 
 I ran the electric GoPed up and down my street until it quit. 
-It appears that the 40 Volt Ryobi battery pack decided the cell voltage was too low and its battery protection circuit shut off.
-Now, the Ryobi charger, that came with it, says there's something wrong (flashing red and green) and won't charge it. 
+It appears that the 40 Volt Ryobi battery pack decided the cell voltage was too low 
+and its battery protection circuit shut off the battery pack.
+Now, the Ryobi charger, that came with it, says there's something wrong (flashing red and green) 
+and won't charge it so I took the battery apart.
+
 There's a pretty big circuit card in the battery pack for balancing and protection. 
 The battery protection circuit includes the typical two power FETs hooked back to back (drain to drain) 
 between battery pack minus and the negative pack output. 
@@ -109,11 +117,12 @@ I'm going to rig up a 40 Volt supply, charge the batteries a little (directly) a
 
 I've been planning to make my own battery protection and balancing circuit which includes a DC to DC converter.
 Looks like I'll have to move that up in the schedule for a long term solution to this problem.
+The board in the battery pack has a lot of parts and looks expensive for something that doesn't work well.
 
-Meanwhile I'm going to set the three speed inputs on the controller to low.
+Meanwhile I'm going to set the three speed inputs on the controller to low speed.
 This GoPed orginally had a super high performance (tunned pipe etc) gas engine and was fast and dangerous.
 It pulled wheelies at 40 mph. I was only brave enough to drive it when I was fairly drunk. 
-I quite drinking a while back and decided to convert it to electric, expecting a mellow experience.
+I quit drinking a while back and decided to convert it to electric, expecting a mellow experience.
 But the top end is still around 40 and the lowest throttle jerks the front wheel off the ground.
 
 
